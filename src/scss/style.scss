@@ -1,0 +1,71 @@
+@import "_mixin.scss";
+@import "common.scss";
+body {
+    background: #F0F0F0;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // padding: 0 pxTorem(10px);
+    @include box_flex;
+    @include direction(column);
+    .header {
+        width: 100%;
+        height: pxTorem(150px);
+        font-size: pxTorem(25px);
+        border-bottom: 2px solid #E5E5E5;
+        @include box_flex;
+        @include direction(column);
+        // @include align;
+        // @include justify(space-between);
+        .top {
+            width: 100%;
+            height: pxTorem(50px);
+            font-size: pxTorem(25px);
+            @include box_flex;
+            @include align;
+            @include justify(space-between);
+        }
+        i {
+            font-size: pxTorem(25px);
+            padding-right: pxTorem(18px);
+        }
+        .smh {
+            height: pxTorem(100px);
+            width: 100%;
+            @include box_flex;
+            @include align;
+            @include justify(space-between);
+            dl {
+                width: 28%;
+                @include box_flex;
+                @include justify;
+                @include direction(column);
+                dd {
+                    @include justify;
+                    @include box_flex;
+                    img {
+                        width: 60%;
+                        height: 50%;
+                    }
+                }
+                dt {
+                    font-size: pxTorem(16px);
+                    @include justify;
+                    @include box_flex;
+                }
+            }
+        }
+    }
+    .body {
+        width: 100%;
+        @include flex;
+        @include box_flex;
+        @include align;
+        @include justify;
+        @include direction(column);
+    }
+}
